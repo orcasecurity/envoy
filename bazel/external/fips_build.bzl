@@ -56,7 +56,7 @@ fi
 """
 
 NINJA_BUILD_COMMAND = """
-set -eo pipefail
+set -xeo pipefail
 
 SRC_DIR=$$(dirname $(location @fips_ninja//:configure.py))
 OUT_FILE=$$(realpath $@)

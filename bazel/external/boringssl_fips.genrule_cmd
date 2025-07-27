@@ -86,7 +86,7 @@ build_boringssl_fips() {
           -DCMAKE_EXE_LINKER_FLAGS="$LDFLAGS" \
           -DCMAKE_SHARED_LINKER_FLAGS="$${LDFLAGS}" \
           ..
-    ninja -j "${NINJA_CORES:-1}"
+    ninja -C /opt/libcxx_tsan/lib -j "${NINJA_CORES:-1}"
 }
 
 validate_fips() {
